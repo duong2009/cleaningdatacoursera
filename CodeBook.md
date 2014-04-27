@@ -1,0 +1,15 @@
+All the data sets are read using read.table function
+- 'test_set/train_set': data sets from test/train data, read from 'x_test.txt/x_train.txt'.
+- 'test_label/train_label': activity code from 1 to 6, read from 'y_test.txt/y_train.txt'.
+- 'test_subject/train_subject': subject who performed activities randing from 1 to 30, read from 'subject_test.txt/subject_train.txt'.
+- 'test_data/train_data': data table consists of 'test_set, test_lable and test_subject/train_set, train_lable and train_subject'
+- 'dataset': complete data set combining test_data and train_data
+- 'feature': labels of all measurements, read from 'features.txt'
+- 'colnames(dataset)' to apply lables to dataset collumns
+- 'keyword': regular expression filtering out lables containing 'mean()' and 'std()'
+- 'filt': return the positions of the lables containing 'keyword'
+- 'data2': new dataset containing only 'activities', 'subjects' and the measurements containing 'keyword'
+- 'activity_label': activity names, read from 'activity_labels.txt'
+- 'mapvalues': function used to convert numbers 1 to 6 to activity names respectively according to activity lables
+- 'dataMelt': reshape data using 'activities' and 'subjects' as id variables
+- 'tidydata': final summarized data returning the mean summary of all measurements group by 'activities' and 'subjects'
